@@ -45,7 +45,7 @@ int main()
     {
         double x = (-C) / B;
         cout << "Linear Equation Detected.\n";
-        cout << "Solution: " << x;
+        cout << "x = " << x;
     }
   }
   else
@@ -57,18 +57,23 @@ int main()
         double answer1 = ( -B + sqrt(discriminant) ) / (2 * A);
         double answer2 = ( -B - sqrt(discriminant) ) / (2 * A);
         cout << "Two solutions found." << "\n";
-        cout << "Solution 1: " << answer1 << "\n";
-        cout << "Solution 2: " << answer2;
+        cout << "x = " << answer1 << "\n";
+        cout << "x = " << answer2;
     }
     else if (discriminant == 0)
     {
         double answer = (-B) / (2 * A);
         cout << "One solution found." << "\n";
-        cout << "Answer: " << answer;
+        cout << "x = " << answer;
     }
     else
     {
-        cout << "No real solutions.";
+        /* cout << "No real solutions."; */
+        double real = (-B) / (2 * A);
+        double imaginary = sqrt(-discriminant) / (2 * A);
+        cout << "Two complex solutions found." << "\n";
+        cout << "x = " << real << " + " << imaginary << "i" << "\n";
+        cout << "x = " << real << " - " << imaginary << "i";
     }
   }
   
